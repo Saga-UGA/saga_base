@@ -1,0 +1,4 @@
+name = saga_base
+description = Parent package for all saga devel.
+core = 7.x
+package = SAGA

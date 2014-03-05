@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Implements hook_menu().
+ */
+function list_hal_publication_base_menu() {
+    $items = array();
+    
+    $items['admin/config/saga'] = array(
+        'title' => 'SAGA',
+        'description' => 'Administer the suite of SAGA modules.',
+        'position' => 'right',
+        'weight' => -10,
+        'page callback' => 'system_admin_menu_block_page',
+        'access arguments' => array('administer site configuration'),
+        'file' => 'system.admin.inc',
+        'file path' => drupal_get_path('module', 'system'),
+    );
+
+    return $items;
+}
